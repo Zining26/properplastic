@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Proper Plastic Packaging</title>
+  <link rel="stylesheet" href="style-contact.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="contact.html" class="active">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- 页面标题 -->
+  <header class="page-header">
+    <h1>Contact Us</h1>
+    <p>We’re Here to Wrap It Right with You!</p>
+  </header>
+
+  <!-- 联系区 -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Our Shop</h2>
+        <p><strong>Proper Plastic Packaging</strong></p>
+        <p>9, Jalan Mutiara 1/10, Taman Mutiara Rini, 81300 Skudai</p>
+
+        <!-- Google Map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.310383911534!2d103.6095208!3d1.514933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da753c41c20d5b%3A0xa2c45a2a2b31f051!2sProper%20Plastic%20Packaging%20(Retail%20%26%20Wholesales)!5e0!3m2!1sen!2smy!4v1731222000000!5m2!1sen!2smy"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <p>📞 +60 11-6170 7216</p>
+        <p>📧 properplastic99@gmail.com</p>
+        <p>🕒 Monday - Saturday: 9AM - 5PM</p>
+    </div>
+
+    <!-- 表单 -->
+      <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+        <h2>Send Us a Message</h2>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="phone">Your Phone</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit">📩 Send via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Hello, I'm ${name} (${phone}).%0A${message}`;
+      const whatsappUrl = `https://wa.me/601161707216?text=${text}`; // ✅ 改成你的WhatsApp号码
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
+
+/* Whatsapp Button */
+<a href="https://wa.me/601161707216" target="_blank" id="whatsapp-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+
+

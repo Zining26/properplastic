@@ -1,0 +1,140 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff9e6;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #f8c600;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 700;
+}
+
+.navbar a.active {
+  border-bottom: 3px solid #444;
+}
+
+.page-header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #fff3cc;
+  border-radius: 15px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.product h3 {
+  color: #333;
+  font-size: 16px;
+  margin: 5px 0; /* ← 调整这里 */
+  line-height: 1.2;
+}
+
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.add-cart {
+  background-color: #f8c600;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-cart:hover {
+  background-color: #ffd633;
+}
+
+.cart-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#checkoutBtn {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#checkoutBtn:hover {
+  background-color: #1ebd5b;
+}
+
+/* 分类按钮样式 */
+.category-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.filter-btn {
+  background-color: white;
+  border: 2px solid #f8c600;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #f8c600;
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: #f8c600;
+  color: white;
+}

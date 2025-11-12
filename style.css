@@ -1,0 +1,292 @@
+body {
+  background-color: #fff2c0;
+  font-family: "Nunito", "Microsoft YaHei", "Arial", sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
+
+.navbar {
+  background-color: hsl(45, 100%, 92%);
+  padding: 15px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .navbar li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+  .navbar a:hover {
+  color: #ffffff;
+}
+
+h1, h2, h3, .navbar a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* 固定导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8c600;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(239, 239, 239);
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff7cc; /* 黄色高亮 */
+}
+
+
+.hero-banner {
+  background: linear-gradient(135deg, #ffe57d, #f8c600);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 20px; /* 圆角 */
+  margin: 1.8rem;
+  color: #ffffff;
+}
+
+.banner-content h1 {
+  font-weight: 800; /* Bold */
+  color: #1a1a1a;
+  font-size: 2.8rem;
+  margin-bottom:1rem;
+}
+
+.banner-content p.address {
+  color: #4d4d4d;
+  font-weight: 400; /* 默认正常字体 */
+  margin-top:0.2rem;
+  margin-bottom:2rem;
+}
+
+.banner-content p.bold-text {
+  font-weight: 700; /* Normal */
+  color:#1a1a1a;
+  margin-top:2rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-content span.highlight {
+  color: #ff0000; /* 红色 ONE-STOP */
+}
+
+.banner-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #f5b800;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: background-color 0.3s,transform 0.2s;
+  border: 2px solid #e0a600
+}
+
+.banner-btn:hover {
+  background-color: #e0a600;
+  transform: translateY(-2px); 
+}
+
+.hero-banner {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* 动画定义：淡入并上滑 */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-content h1,
+.banner-content .address,
+.banner-content .slogan,
+.banner-content .subline,
+.banner-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpText 0.8s ease-out forwards;
+}
+
+.banner-content h1 { animation-delay: 0.2s; }
+.banner-content .address { animation-delay: 0.4s; }
+.banner-content .slogan { animation-delay: 0.6s; }
+.banner-content .subline { animation-delay: 0.8s; }
+.banner-btn { animation-delay: 1s; }
+
+@keyframes fadeUpText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-banner {
+  background: linear-gradient(to right, #fffbe0, #f8c600);
+  color: #333333;
+  margin: 80px auto 0;
+  padding: 60px 40px;
+  border-radius: 25px;
+  width: 85%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 让文字与图片并排 */
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 让小屏幕时自动换行 */
+  gap: 40px;
+}
+
+.text-area {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.image-area {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.image-area img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.image-area img:hover {
+  transform: scale(1.05);
+}
+
+/* 标题与文字样式 */
+.text-area h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: #333333;
+  margin-bottom: 6px;
+}
+
+.text-area .address {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.text-area .slogan {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.text-area .subline {
+  font-size: 18px;
+  font-weight:700;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.text-area .highlight {
+  color: #d32f2f;
+  font-weight: 800;
+}
+
+.banner-btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 26px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: #256428;
+  transform: scale(1.05);
+}
+
+/* 🔥 让 ONE-STOP 变红并闪烁放大动画 */
+.highlight {
+  color: #d32f2f;
+  font-weight: 800;
+  display: inline-block;
+  animation: pulseHighlight 2s ease-in-out infinite;
+}
+
+@keyframes pulseHighlight {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
